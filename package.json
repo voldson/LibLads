@@ -1,0 +1,25 @@
+{
+  "name": "liblads-for-cs252",
+  "version": "1.0.0",
+  "description": "This folder contains all the files needed for my CS252 project called LibLads",
+  "main": "main.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voldson/LibLads.git"
+  },
+  "author": "Kelly Plakyda (back-end)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voldson/LibLads/issues"
+  },
+  "homepage": "https://github.com/voldson/LibLads#readme"
+}
