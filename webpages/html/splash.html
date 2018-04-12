@@ -6,11 +6,13 @@
 	</head>
 	</head>
 	<body>
-		<form>
+		<form action="/login" method="GET">
 			<p class="text">The other day I went to LibLads.com. I knew that if I didn't</p>
-			<button id="button" routerLink="/login" routerLinkActive="active">Sign in</button>
+			<input type="submit" value="Login">
 			<p>yet, I would need to </p>
-			<button>Sign up</button>
+		</form>
+		<form action="/sign-up" method="GET">
+			<input type="submit" value="Sign-up">
 			<p>instead so I could make some LibLads!</p>
 		</form>
 	</body>

@@ -1,8 +1,10 @@
 <html>
 	<body>
-		<form>
-			<button routerLink="/fillin" routerLinkActive="active">Fill-In</button>
-			<button routerLink="/write" routerLinkActive="active">Write</button>
+		<form action="/fill-in" method="GET">
+			<input type="submit" value="Fill-In">
+		</form>
+		<form action="/create" method="GET">
+			<input type="submit" value="Create">
 		</form>
 	</body>
 </html>
