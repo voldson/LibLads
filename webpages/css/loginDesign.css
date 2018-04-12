@@ -4,7 +4,7 @@
 
 body {
     width: 100%;
-    height: 100%;
+    height: 0;
     padding: 0;
     margin: 0;
     background: #eee;
@@ -14,13 +14,13 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 500px;
-    min-width: 500px;
 }
 
 html {
     width: 100%;
     height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 form {
@@ -29,56 +29,52 @@ form {
     align-items: center;
     height: 100%;
     flex-direction: column;
+    min-block-size: fit-content;
+    margin: 8%;
 }
 
 label {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    /*margin-top: 2%;*/
 }
 
 input {
-    /*width: 20%;
+    width: 35%;
+    border: 5px outset #622A0F;
     padding: 10px 0;
-    font-size: 20px;
-    text*/
-    width: 30%;
-    border: 5px outset brown;
-    padding: 10px 0;
-    margin: 5px;
+    margin-bottom: 1px;
     text-align: center;
     font-size: 20px;
 }
 
 input[type="submit"] {
-    /*background: brown;
-    border-radius: 8px;
-    color: white;
-    border: 0;
-    box-shadow: 0 0 10px black;
-    cursor: pointer;
-    width: 90px;
-    font-size: 20px;
-    padding: 10px 0;*/
     display: inline-block;
-  padding: 15px 15px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: rgb(165,42,42);
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-  margin-bottom: 20%;
+    padding: 15px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #622A0F;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 9px #999;
+    margin-top: 15px;
+    min-block-size: fit-content; 
+    width: 30%;
 }
-input[type="submit"]:hover {background-color: rgb(219, 86, 86)}
+
+input[type="submit"]:hover {
+    background-color: rgb(133, 58, 21);
+}
 
 input[type="submit"]:active {
-  background-color: rgb(102, 17, 17);
+  background-color: rgb(68, 30, 11);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+  color: rgba(255, 255, 255, 0.801)
 }
 
 /*
