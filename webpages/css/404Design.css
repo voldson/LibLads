@@ -1,0 +1,25 @@
+* {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    min-block-size: fit-content;
+    margin: 20%;
+
+    background: url(book.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+label {
+    font-size: 40px;
+    margin-bottom: 15px;
+    /*margin-top: 2%;*/
+}
