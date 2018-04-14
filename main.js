@@ -4,6 +4,8 @@
 var express = require('express');
 var path = require('path');
 var fs = require('fs');
+var confirm = require('prompt-confirm');
+var prompt = new confirm("Please try again");
 var app = express();
 
 var webPath = '\\webpages\\html';
@@ -21,7 +23,7 @@ app.get('/login', toLogin);
 app.get('/sign-up', toSignUp);
 
 // Login button is pressed from login screen
-app.post('/login', redirectToChoice);
+app.post('/login', authenticateLogin);
 
 // Sign-Up button is pressed from signup screen
 app.post('/sign-up', redirectToChoice);
@@ -55,6 +57,10 @@ function toLogin(req, resp) {
 }
 function toSignUp(req, resp) {
     resp.sendFile('signup.html', {root: path.join(__dirname, webPath)});    
+}
+function authenticateLogin(req, resp) {
+    // Check first that they typed something
+    
 }
 function redirectToChoice(req, resp) {
     resp.redirect('/choice');
