@@ -2,20 +2,20 @@
 const emailField = document.getElementById("emailField");
 const passField = document.getElementById("passField");
 const loginButton = document.getElementById("loginButton");
-const auth = firebase.auth();
 
 // Set action listeners
 loginButton.addEventListener("click", authenticateLogin);
 
 // Callbacks
 function authenticateLogin() {
-    var email = emailField.textContent;
-    var pass = passField.textContent;
+    var email = emailField.value;
+    var pass = passField.value;
 
     // Firebase code
-    auth.signInWithEmailAndPassword(email, pass);
-
-    goToChoiceScreen();
+    const promise = auth.signInWithEmailAndPassword(email, pass);
+    //promise.catch(e => console.log(e.message));
+    console.log(promise);
+    //goToChoiceScreen();
 }
 function goToChoiceScreen() {
     window.location.href = "../html/choice.html";
