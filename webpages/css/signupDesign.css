@@ -16,7 +16,7 @@ body {
     background-size: cover;
 }
 
-form {
+#mainDiv {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,17 +41,14 @@ input {
     font-size: 20px;
 }
 
-input[type="submit"] {
+button {
     display: inline-block;
     padding: 15px 15px;
     font-size: 24px;
     cursor: pointer;
     text-align: center;
-    text-decoration: none;
-    outline: none;
     color: #fff;
     background-color: #622A0F;
-    border: none;
     border-radius: 10px;
     box-shadow: 0 9px #999;
     margin-top: 15px;
@@ -59,11 +56,11 @@ input[type="submit"] {
     width: 30%;
 }
 
-input[type="submit"]:hover {
+button:hover {
     background-color: rgb(133, 58, 21);
 }
 
-input[type="submit"]:active {
+button:active {
   background-color: rgb(68, 30, 11);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
