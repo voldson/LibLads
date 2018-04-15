@@ -2,14 +2,14 @@
     font-family: 'Times New Roman', Times, serif, sans-serif;
 }
 
-body{
+body {
     width: 100%;
     height: 0;
     padding: 0;
     margin: 0;
     background: #eee;
 
-	background: url(../images/bookStretchedTop.png) no-repeat center center fixed;
+    background: url(../images/bookStretchedTop.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -24,11 +24,12 @@ body{
     flex-direction: column;
     min-block-size: fit-content;
     margin: 8%;
-    margin-bottom: -110px;
 }
 
 label {
     font-size: 24px;
+    margin-bottom: 15px;
+    /*margin-top: 2%;*/
 }
 
 button {
@@ -41,8 +42,7 @@ button {
     background-color: #622A0F;
     border-radius: 10px;
     box-shadow: 0 9px #999;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 15px;
     min-block-size: fit-content; 
     width: 30%;
 }

@@ -1,30 +1,20 @@
 <html>
 	<head>
+		<meta charset="utf-8">
+		<title>LibLads!</title>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 		<link rel="stylesheet"
   		type="text/css"
    		href="../css/signupDesign.css"/>
 	</head>
 	<body>
-		<label>Sign up for your new account!</label>
-		<input type="text" name="email" id="emailField" placeholder="Email"><br>
-		<input type="password" name="password" id="passField" placeholder="Password"><br>
-		<input type="password" name="cPassword" id="repassField" placeholder="Confirm Password"><br>
-		<button id="signupButton">Sign-Up</button>
-
-		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-		<script>
-  			// Initialize Firebase
-  			var config = {
-    			apiKey: "AIzaSyDTkmR5lJoQ7-ndUQ5Zqt83LbjYJLOIP24",
-    			authDomain: "liblads-80e29.firebaseapp.com",
-    			databaseURL: "https://liblads-80e29.firebaseio.com",
-    			projectId: "liblads-80e29",
-    			storageBucket: "liblads-80e29.appspot.com",
-    			messagingSenderId: "1014749515123"
-  			};
-  			firebase.initializeApp(config);
-		</script>
-
+		<div id="mainDiv">
+			<label>Sign up for your new account!</label>
+			<input type="text" name="email" id="emailField" placeholder="Email"><br>
+			<input type="password" name="password" id="passField" placeholder="Password"><br>
+			<input type="password" name="cPassword" id="repassField" placeholder="Confirm Password"><br>
+			<button id="signupButton">Sign-Up</button>
+		</div>
 		<script src="../javascript/signupJS.js"></script>
 	</body>
 </html>
