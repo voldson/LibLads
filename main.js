@@ -4,14 +4,20 @@
 var express = require('express');
 var path = require('path');
 var fs = require('fs');
-var confirm = require('prompt-confirm');
-var prompt = new confirm("Please try again");
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017";
 var app = express();
 
 var webPath = '\\webpages\\html';
 var cssPath = '\\webpages\\css';
 
 app.use(express.static('webpages'));
+
+// Start the server
+app.listen(1058, function() {
+    // Display on the console that the server is running
+    console.log("Listening at port 1058");
+});
 
 // Home splash screen
 app.get('/', toSplash);
@@ -43,12 +49,10 @@ app.post('/submit-story', toSubmitStory);
 // See Story (change name) is pressed from fillin screen
 app.get('/see-story', toSeeStory);
 
-app.listen(1058, function() {
-    // Display on the console that the server is running
-    console.log("Listening at port 1058");
-});
 
-// Will move these to different files later
+
+
+
 function toSplash(req, resp) {
     resp.sendFile('splash.html', {root: path.join(__dirname, webPath)});
 }
@@ -59,8 +63,7 @@ function toSignUp(req, resp) {
     resp.sendFile('signup.html', {root: path.join(__dirname, webPath)});    
 }
 function authenticateLogin(req, resp) {
-    // Check first that they typed something
-    
+    redirectToChoice(req, resp);
 }
 function redirectToChoice(req, resp) {
     resp.redirect('/choice');
