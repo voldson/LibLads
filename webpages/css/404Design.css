@@ -11,7 +11,7 @@ body {
     min-block-size: fit-content;
     margin: 20%;
 
-    background: url(book.png) no-repeat center center fixed;
+    background: url(../images/bookStretchedTop.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
