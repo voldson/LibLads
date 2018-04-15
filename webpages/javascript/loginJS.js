@@ -2,6 +2,7 @@
 const emailField = document.getElementById("emailField");
 const passField = document.getElementById("passField");
 const loginButton = document.getElementById("loginButton");
+const auth = firebase.auth();
 
 // Set action listeners
 loginButton.addEventListener("click", authenticateLogin);
@@ -12,6 +13,7 @@ function authenticateLogin() {
     var pass = passField.textContent;
 
     // Firebase code
+    auth.signInWithEmailAndPassword(email, pass);
 
     goToChoiceScreen();
 }

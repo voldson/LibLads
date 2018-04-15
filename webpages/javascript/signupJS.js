@@ -3,6 +3,7 @@ const emailField = document.getElementById("emailField");
 const passField = document.getElementById("passField");
 const repassField = document.getElementById("repassField");
 const signupButton = document.getElementById("signupButton");
+const auth = firebase.auth();
 
 // Add event listeners
 signupButton.addEventListener("click", authenticateSignup);
@@ -14,15 +15,15 @@ function authenticateSignup() {
     var repass = repassField.textContent;
 
     // Validate information
-   /*
    if (pass !== repass) {
         // Passwords don't match
     } else if (!validEmail(email)) {
         // Invalid email
     } else if (!signupUser(email)) {
-        // Attempt signing up user
+        // firebase code
+        auth.createUserWithEmailAndPassword(email, pass);
     }
-    */
+
 
     goToChoiceScreen();
 }
