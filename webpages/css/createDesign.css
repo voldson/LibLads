@@ -26,10 +26,26 @@ body {
     margin: 8%;
 }
 
+textarea {
+    width: 80%;
+    border: 5px outset #622A0F;
+    padding: 15% 0;
+    padding-top: 0;
+    margin-bottom: 1px;
+    text-align: top left;
+    font-size: 20px;
+    margin-bottom: 4%;
+}
+
 label {
     font-size: 24px;
-    margin-bottom: 15px;
     /*margin-top: 2%;*/
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 3%;
 }
 
 button {
