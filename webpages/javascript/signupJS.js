@@ -9,22 +9,35 @@ signupButton.addEventListener("click", authenticateSignup);
 
 // Callbacks
 function authenticateSignup() {
-    var email = emailField.textContent;
-    var pass = passField.textContent;
-    var repass = repassField.textContent;
+    var email = emailField.value;
+    var pass = passField.value;
+    var repass = repassField.value;
 
     // Validate information
-   /*
    if (pass !== repass) {
         // Passwords don't match
+        console.log("passwords don't match");
     } else if (!validEmail(email)) {
         // Invalid email
-    } else if (!signupUser(email)) {
-        // Attempt signing up user
-    }
-    */
+        console.log("invalid email");
+    } else {
+        console.log("Sign-up button pressed");
+        // firebase code
+        var error;
+        console.log("error variable created");
+        const promise = auth.createUserWithEmailAndPassword(email, pass);
+        console.log("Promise item returned");
+        promise.catch(e => error = e);
+        console.log("Sign-up button pressed");
 
-    goToChoiceScreen();
+        console.log(promise + "\nError: " + error);
+/*
+        if (error) {
+            console.log(error.message);
+        } else {
+           // goToChoiceScreen();
+        }*/
+    }
 }
 
 function validEmail(email) {
@@ -41,10 +54,6 @@ function validEmail(email) {
     }
 }
 
-function signupUser(email) {
-
-}
-
 function goToChoiceScreen() {
-    window.location.href = "../html/choice.html";
+   // window.location.href = "choice.html";
 }

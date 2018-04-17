@@ -8,13 +8,15 @@ loginButton.addEventListener("click", authenticateLogin);
 
 // Callbacks
 function authenticateLogin() {
-    var email = emailField.textContent;
-    var pass = passField.textContent;
+    var email = emailField.value;
+    var pass = passField.value;
 
     // Firebase code
-
-    goToChoiceScreen();
+    const promise = auth.signInWithEmailAndPassword(email, pass);
+    //promise.catch(e => console.log(e.message));
+    console.log(promise);
+    //goToChoiceScreen();
 }
 function goToChoiceScreen() {
-    window.location.href = "../html/choice.html";
+    window.location.href = "choice.html";
 }
