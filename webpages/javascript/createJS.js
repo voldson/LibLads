@@ -16,5 +16,5 @@ function validateStory() {
 }
 
 function goToSubmissionScreen() {
-    window.location.href = "../html/404.html";
+    window.location.href = "404.html";
 }

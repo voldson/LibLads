@@ -18,5 +18,5 @@ function authenticateLogin() {
     //goToChoiceScreen();
 }
 function goToChoiceScreen() {
-    window.location.href = "../html/choice.html";
+    window.location.href = "choice.html";
 }

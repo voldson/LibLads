@@ -27,11 +27,11 @@ function authenticateSignup() {
         console.log("error variable created");
         const promise = auth.createUserWithEmailAndPassword(email, pass);
         console.log("Promise item returned");
-       /* promise.catch(e => error = e);
+        promise.catch(e => error = e);
         console.log("Sign-up button pressed");
 
         console.log(promise + "\nError: " + error);
-
+/*
         if (error) {
             console.log(error.message);
         } else {
@@ -55,5 +55,5 @@ function validEmail(email) {
 }
 
 function goToChoiceScreen() {
-   // window.location.href = "../html/choice.html";
+   // window.location.href = "choice.html";
 }

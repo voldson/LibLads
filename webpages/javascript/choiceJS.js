@@ -8,8 +8,8 @@ createButton.addEventListener("click", goToCreateScreen);
 
 // Callbacks
 function goToFillinScreen() {
-    window.location.href = "../html/fillin.html";
+    window.location.href = "fillin.html";
 }
 function goToCreateScreen() {
-    window.location = "../html/create.html"
+    window.location = "create.html"
 }

@@ -1,6 +1,6 @@
 // Get page elements
-const indexLoginButton = document.getElementById("splashLoginButton");
-const indexSignupButton = document.getElementById("splashSignupButton");
+const indexLoginButton = document.getElementById("indexLoginButton");
+const indexSignupButton = document.getElementById("indexSignupButton");
 
 // Add event listeners
 indexLoginButton.addEventListener("click", goToLoginScreen);
@@ -8,8 +8,8 @@ indexSignupButton.addEventListener("click", goToSignupScreen);
 
 // Callbacks
 function goToLoginScreen() {
-    window.location.href = "../html/login.html";
+    window.location.href = "login.html";
 }
 function goToSignupScreen() {
-    window.location = "../html/signup.html"
+    window.location = "signup.html"
 }
