@@ -19,8 +19,12 @@ function authenticateLogin() {
     // ...
     console.log("Sign in error");
   });
+
+  // if all is fine, go to the choice screen to continue
+  goToChoiceScreen();
 }
 function goToChoiceScreen() {
+  console.log("got to function");
     window.location.href = "choice.html";
 }
 
@@ -39,6 +43,10 @@ firebase.auth().onAuthStateChanged(function(user) {
     } else {
       // User is signed out.
       // ...
-      console.log("User signed out");
+      firebase.auth().signOut().then(function() {
+        console.log('Signed Out');
+      }, function(error) {
+        console.error('Sign Out Error', error);
+      });
     }
   });

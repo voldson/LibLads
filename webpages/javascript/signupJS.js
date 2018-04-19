@@ -5,19 +5,7 @@ const repassField = document.getElementById("repassField");
 const signupButton = document.getElementById("signupButton");
 
 // Add event listeners
-signupButton.addEventListener("click", authenticateSignup);
-
-firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
-    console.log("Create user error");
-  });
-
-
-// Callbacks
-/*function authenticateSignup() {
+signupButton.addEventListener("click", function() {
     var email = emailField.value;
     var pass = passField.value;
     var repass = repassField.value;
@@ -30,23 +18,21 @@ firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(e
         // Invalid email
         console.log("invalid email");
     } else {
-        console.log("Sign-up button pressed");
-        // firebase code
-        var error;
-        console.log("error variable created");
-        const promise = auth.createUserWithEmailAndPassword(email, pass);
-        console.log("Promise item returned");
-        promise.catch(e => error = e);
-        console.log("Sign-up button pressed");
+        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ...
+            console.log("Create user error");
+          });
 
-        console.log(promise + "\nError: " + error);
-
-        if (error) {
-            console.log(error.message);
-        } else {
-           // goToChoiceScreen();
-        }
+          console.log("No sign up error");
     }
+});
+
+// Callbacks
+function authenticateSignup() {
+    
 }
 
 function validEmail(email) {
@@ -65,4 +51,4 @@ function validEmail(email) {
 
 function goToChoiceScreen() {
    // window.location.href = "choice.html";
-}*/
+}
