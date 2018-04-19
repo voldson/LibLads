@@ -7,8 +7,17 @@ const signupButton = document.getElementById("signupButton");
 // Add event listeners
 signupButton.addEventListener("click", authenticateSignup);
 
+firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+    console.log("Create user error");
+  });
+
+
 // Callbacks
-function authenticateSignup() {
+/*function authenticateSignup() {
     var email = emailField.value;
     var pass = passField.value;
     var repass = repassField.value;
@@ -31,12 +40,12 @@ function authenticateSignup() {
         console.log("Sign-up button pressed");
 
         console.log(promise + "\nError: " + error);
-/*
+
         if (error) {
             console.log(error.message);
         } else {
            // goToChoiceScreen();
-        }*/
+        }
     }
 }
 
@@ -56,4 +65,4 @@ function validEmail(email) {
 
 function goToChoiceScreen() {
    // window.location.href = "choice.html";
-}
+}*/
