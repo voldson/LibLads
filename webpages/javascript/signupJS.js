@@ -18,7 +18,7 @@ signupButton.addEventListener("click", function() {
         // Invalid email
         console.log("invalid email");
     } else {
-        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -26,14 +26,9 @@ signupButton.addEventListener("click", function() {
             console.log("Create user error");
           });
 
-          console.log("No sign up error");
+          goToChoiceScreen();
     }
 });
-
-// Callbacks
-function authenticateSignup() {
-    
-}
 
 function validEmail(email) {
     var hasAt = email.includes("@");
@@ -50,5 +45,5 @@ function validEmail(email) {
 }
 
 function goToChoiceScreen() {
-   // window.location.href = "choice.html";
+    window.location.href = "choice.html";
 }
