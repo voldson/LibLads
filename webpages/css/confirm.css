@@ -9,7 +9,7 @@ body {
     height: 100%;
     flex-direction: column;
     min-block-size: fit-content;
-    margin: 20%;
+    margin: 15%;
 
     background: url(../images/bookStretchedTop.png) no-repeat center center fixed;
     -webkit-background-size: cover;
