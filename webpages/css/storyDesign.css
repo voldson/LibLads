@@ -23,8 +23,7 @@ body {
     height: 100%;
     flex-direction: column;
     min-block-size: fit-content;
-    margin: 4%;
-    margin-bottom: -4%;
+    margin: 10%;
 }
 
 label {
