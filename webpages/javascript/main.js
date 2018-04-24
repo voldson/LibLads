@@ -14,24 +14,6 @@ firebase.initializeApp(config)
 const dbRefEmptyStories = firebase.database().ref().child('emptyStories');
 const dbRefCurrentUsers = firebase.database().ref().child('currentUsers');
 
-// Sign in a user
-function signInUser(email, pass) {
-    firebase.auth().signInWithEmailAndPassword(email, pass).then(function (user) {
-        addUserToDB(user.uid, "", "");
-    }, function(error) {
-        console.log(error.message);
-    });
-}
-
-// Create a user
-function createUser(email, pass) {
-    firebase.auth().createUserWithEmailAndPassword(email, pass).then(function (user) {
-        addUserToDB(user.uid, "", "");
-    }, function(error) {
-        console.log(error.message);
-    });
-}
-
 // Adding a user to the database
 function addUserToDB(userID, currentStory, blankFillers) {
     var data = {
@@ -58,15 +40,49 @@ function addNewStoryToDB(parsedBlanks, contentText, summaryText, titleText, numB
      dbRefEmptyStories.child(titleText).set(data);
  
      console.log("added story"); 
+
+     goToConfirm();
  }
 
-// Check for signing in
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-        // User is signed in.
-        console.log("Successfully signed in: " + user.email);
-    } else {
-        // No user is signed in
-        console.log("no user");
-    }
-});
+// Sign in a user
+function signInUser(email, pass) {
+    firebase.auth().signInWithEmailAndPassword(email, pass).then(function (user) {
+        addUserToDB(user.uid, "", "");
+        goToChoice();
+    }, function(error) {
+        alert(error.message);
+    });
+}
+
+// Create a user
+function createUser(email, pass) {
+    firebase.auth().createUserWithEmailAndPassword(email, pass).then(function (user) {
+        addUserToDB(user.uid, "", "");
+        goToChoice();
+    }, function(error) {
+        alert(error.message);
+    });
+}
+
+// Moving screens
+function goToLogin() {
+    window.location.href = "../login.html";
+}
+function goToSignup() {
+    window.location.href = "../signup.html";
+}
+function goToChoice() {
+    window.location.href = "../choice.html";
+}
+function goToFillin() {
+    window.location.href = "../fillin.html";
+}
+function goToCreate() {
+    window.location.href = "../create.html";
+}
+function goToConfirm() {
+    window.location.href = "../confirm.html";
+}
+function goToStory() {
+    window.location.href = "../story.html";
+}

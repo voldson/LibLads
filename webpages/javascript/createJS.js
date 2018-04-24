@@ -6,6 +6,7 @@ const contentField = document.getElementById("contentField");
 
 // Other variables
 var blanks = "";
+var numBlanks = 0;
 
 // Add event listener
 submitStoryButton.addEventListener("click", validateStory);
@@ -22,8 +23,6 @@ function validateStory() {
     } else {
         // Add this information to the databse
         addNewStoryToDB(blanks, contentField.value, summaryField.value, titleField.value, numBlanks);
-
-        // goToSubmissionScreen();
     }    
 }
 
@@ -31,7 +30,6 @@ function parseContent() {
     // Parse out the elements following the <:WORD:> format
     var content = contentField.value;
     var split1 = content.split(/[<][:]/);
-    var numBlanks = 0;
 
     for (i = 0; i < split1.length; i++) {
         // Get each word
@@ -59,8 +57,4 @@ function parseContent() {
    }
    
    return (numBlanks === 0) ? false : true;
-}
-
-function goToSubmissionScreen() {
-   // window.location.href = "404.html";
 }
