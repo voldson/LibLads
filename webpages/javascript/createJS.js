@@ -5,7 +5,7 @@ const summaryField = document.getElementById("summaryField");
 const contentField = document.getElementById("contentField");
 
 // Other variables
-var parsedBlanks = [];
+var blanks = "";
 
 // Add event listener
 submitStoryButton.addEventListener("click", validateStory);
@@ -21,7 +21,7 @@ function validateStory() {
         alert("Please provide at least one valid blank for your story.");
     } else {
         // Add this information to the databse
-        // addNewStory(parsedBlanks, contentField.value, summaryField.value, titleField.value);
+        addNewStoryToDB(blanks, contentField.value, summaryField.value, titleField.value, numBlanks);
 
         // goToSubmissionScreen();
     }    
@@ -32,7 +32,6 @@ function parseContent() {
     var content = contentField.value;
     var split1 = content.split(/[<][:]/);
     var numBlanks = 0;
-    var blanks = "";
 
     for (i = 0; i < split1.length; i++) {
         // Get each word

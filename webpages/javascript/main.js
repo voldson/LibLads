@@ -10,30 +10,17 @@ var config = {
 
 firebase.initializeApp(config)
 
-// Global variables
-const auth = firebase.auth();
-
 // Create reference to the database
 const dbRefEmptyStories = firebase.database().ref().child('emptyStories');
 const dbRefCurrentUsers = firebase.database().ref().child('currentUsers');
 
 // Sign in a user
 function signInUser(email, pass) {
-    var hadError = false;
-
-    // Firebase code
-    auth.signInWithEmailAndPassword(email, pass).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        hadError = true;
-        // ...
-        console.log(errorCode + ": " + errorMessage);
+    firebase.auth().signInWithEmailAndPassword(email, pass).then(function (user) {
+        addUserToDB(user.uid, "", "");
+    }, function(error) {
+        console.log(error.message);
     });
-
-    if (!hadError) {
-        addUserToDB(auth.uid, "", "");
-    }
 }
 
 // Create a user
@@ -47,15 +34,6 @@ function createUser(email, pass) {
 
 // Adding a user to the database
 function addUserToDB(userID, currentStory, blankFillers) {
-    /*var dbRefThisUser = firebase.database().ref('currentUsers/' + userID);
-    dbRefThisUser.set({
-        "userID": userID,
-        "currentStory": currentStory,
-        "blankFillers": blankFillers
-    });*/
-
-    console.log("blankFillers:", blankFillers, "\ncurrentStory:", currentStory, "\nuserID:", userID);
-
     var data = {
         "blankFillers": blankFillers,
         "currentStory": currentStory
@@ -63,8 +41,24 @@ function addUserToDB(userID, currentStory, blankFillers) {
 
     dbRefCurrentUsers.child(userID).set(data).then(function(dbRefCurrentUsers) {
         console.log("Initialized user data");
-    })
+    });
 }
+
+// Writing a story to the database
+function addNewStoryToDB(parsedBlanks, contentText, summaryText, titleText, numBlanks) {
+    // Put together the element to add to the database
+     var data = {
+         "blanks": parsedBlanks,
+         "content": contentText,
+         "numBlanks": numBlanks,
+         "summary": summaryText,
+         "title": titleText
+     };
+     alert("adding story 2");
+     dbRefEmptyStories.child(titleText).set(data);
+ 
+     console.log("added story"); 
+ }
 
 // Check for signing in
 firebase.auth().onAuthStateChanged(function(user) {
@@ -76,23 +70,3 @@ firebase.auth().onAuthStateChanged(function(user) {
         console.log("no user");
     }
 });
-
-// Writing a story to the database
-function addNewStoryToDB(parsedBlanks, contentText, summaryText, titleText) {
-    // Put together the element to add to the database
-    var story = {
-        blanks: parsedBlanks,
-        content: contentText,
-        creator: auth.uid,
-        numBlanks: parsedBlanks.length,
-        summary: summaryText,
-        title: titleText
-    };
-
-    // Get a key for the new story to be added
-    var newStoryKey = db
-
-    dbRefEmptyStories.on('value', snap => {
-        dbRefEmptyStories.set
-    });
-}

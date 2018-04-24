@@ -1,33 +1,32 @@
-[debug] [2018-04-24T02:10:02.258Z] ----------------------------------------------------------------------
-[debug] [2018-04-24T02:10:02.261Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kelly\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-04-24T02:10:02.261Z] CLI Version:   3.18.4
-[debug] [2018-04-24T02:10:02.261Z] Platform:      win32
-[debug] [2018-04-24T02:10:02.261Z] Node Version:  v8.11.1
-[debug] [2018-04-24T02:10:02.261Z] Time:          Mon Apr 23 2018 22:10:02 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-04-24T02:10:02.261Z] ----------------------------------------------------------------------
+[debug] [2018-04-24T05:32:03.213Z] ----------------------------------------------------------------------
+[debug] [2018-04-24T05:32:03.216Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kelly\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-24T05:32:03.217Z] CLI Version:   3.18.4
+[debug] [2018-04-24T05:32:03.217Z] Platform:      win32
+[debug] [2018-04-24T05:32:03.217Z] Node Version:  v8.11.1
+[debug] [2018-04-24T05:32:03.217Z] Time:          Tue Apr 24 2018 01:32:03 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T05:32:03.217Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-04-24T02:10:02.272Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-04-24T02:10:02.273Z] > authorizing via signed-in user
-[debug] [2018-04-24T02:10:02.275Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/liblads-80e29  
+[debug] [2018-04-24T05:32:03.229Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-24T05:32:03.231Z] > authorizing via signed-in user
+[debug] [2018-04-24T05:32:03.234Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/liblads-80e29  
   
- Mon Apr 23 2018 22:10:02 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-04-24T02:10:02.603Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-24T02:10:02.604Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/liblads-80e29/tokens  
+ Tue Apr 24 2018 01:32:03 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T05:32:03.547Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-24T05:32:03.550Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/liblads-80e29/tokens  
   
- Mon Apr 23 2018 22:10:02 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-04-24T02:10:02.925Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-24T02:10:02.927Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/liblads-80e29  
+ Tue Apr 24 2018 01:32:03 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T05:32:03.887Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-24T05:32:03.888Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/liblads-80e29  
   
- Mon Apr 23 2018 22:10:02 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-04-24T02:10:03.141Z] <<< HTTP RESPONSE 200
+ Tue Apr 24 2018 01:32:03 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T05:32:04.093Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'C:\Users\Kelly\LibLads'...
 [info] 
-[debug] [2018-04-24T02:10:03.145Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1014749515123/clients/_:getWebAppConfig  
+[debug] [2018-04-24T05:32:04.099Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1014749515123/clients/_:getWebAppConfig  
   
- Mon Apr 23 2018 22:10:03 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-04-24T02:10:03.357Z] <<< HTTP RESPONSE 200
+ Tue Apr 24 2018 01:32:04 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T05:32:04.366Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: webpages
 [info] +  hosting: Local server: http://localhost:5000
 
-[info] Shutting down...
