@@ -13,14 +13,12 @@ signupButton.addEventListener("click", function() {
     // Validate information
    if (pass !== repass) {
         // Passwords don't match
-        console.log("passwords don't match");
+        alert("The passwords do not match.");
     } else if (!validEmail(email)) {
         // Invalid email
-        console.log("invalid email");
+        alert("Please enter a valid email.");
     } else {
         createUser(email, pass);
-
-        goToChoiceScreen();
     }
 });
 
@@ -36,8 +34,4 @@ function validEmail(email) {
     } else {
         return false;
     }
-}
-
-function goToChoiceScreen() {
-    window.location.href = "choice.html";
 }
