@@ -10,6 +10,9 @@ var config = {
 
 firebase.initializeApp(config)
 
+// The list of stories
+let emptyStories = [];
+
 // Create reference to the database
 const dbRefEmptyStories = firebase.database().ref().child('emptyStories');
 const dbRefCurrentUsers = firebase.database().ref().child('currentUsers');
@@ -36,12 +39,9 @@ function addNewStoryToDB(parsedBlanks, contentText, summaryText, titleText, numB
          "summary": summaryText,
          "title": titleText
      };
-     alert("adding story 2");
      dbRefEmptyStories.child(titleText).set(data);
  
-     console.log("added story"); 
-
-     goToConfirm();
+     // goToConfirm();
  }
 
 // Sign in a user
@@ -63,6 +63,17 @@ function createUser(email, pass) {
         alert(error.message);
     });
 }
+
+// Sync object changes
+dbRefEmptyStories.on('child_added', function(snap) { 
+    console.log(snap.val());
+    emptyStories.push(snap.val());
+    console.log(emptyStories);
+});
+dbRefEmptyStories.on('child_removed', function(snap) { 
+    // emptyStories = emptyStories.filter(item => item !== snap.val());
+    console.log(snap.val());
+});
 
 // Moving screens
 function goToLogin() {

@@ -20,12 +20,25 @@ function validateStory() {
         alert("Please provide a summary of your story.");
     } else if (parseContent() === false) {
         alert("Please provide at least one valid blank for your story.");
+    } else if (checkIfStoryExists(titleField.value)) {
+        alert("A story by that name already exists. Please change the title.");
     } else {
         // Add this information to the databse
         addNewStoryToDB(blanks, contentField.value, summaryField.value, titleField.value, numBlanks);
     }    
 }
 
+// Check to see if a story by that name already exists
+function checkIfStoryExists(title) {
+    for (i = 0; i < emptyStories.length; i++) {
+        if (title === emptyStories[i].title) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// Use the parsing tokens to save the blanks
 function parseContent() {
     // Parse out the elements following the <:WORD:> format
     var content = contentField.value;
