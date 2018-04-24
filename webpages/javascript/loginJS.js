@@ -16,30 +16,7 @@ function authenticateLogin() {
   // if all is fine, go to the choice screen to continue
   goToChoiceScreen();
 }
-function goToChoiceScreen() {
-  console.log("got to function");
-    window.location.href = "choice.html";
-}
 
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-      var displayName = user.displayName;
-      var email = user.email;
-      var emailVerified = user.emailVerified;
-      var photoURL = user.photoURL;
-      var isAnonymous = user.isAnonymous;
-      var uid = user.uid;
-      var providerData = user.providerData;
-      // ...
-      console.log("User signed in");
-    } else {
-      // User is signed out.
-      // ...
-      firebase.auth().signOut().then(function() {
-        console.log('Signed Out');
-      }, function(error) {
-        console.error('Sign Out Error', error);
-      });
-    }
-  });
+function goToChoiceScreen() {
+  window.location.href = "choice.html";
+}

@@ -66,24 +66,16 @@ function addUserToDB(userID, currentStory, blankFillers) {
     })
 }
 
-// Check for signing in and out
+// Check for signing in
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      // User is signed in.
+        // User is signed in.
         console.log("Successfully signed in: " + user.email);
     } else {
-      // No user is signed in.
-      /*db.ref("/currentUsers/" + user.uid).remove()
-        .then(function() {
-            console.log("Successfully signed out: " + user.email);
-        })
-        .catch(function(err) {
-            console.log("Error signing out " + user.email + "\n" + err.message);
-        });*/
+        // No user is signed in
         console.log("no user");
     }
-  });
-
+});
 
 // Writing a story to the database
 function addNewStoryToDB(parsedBlanks, contentText, summaryText, titleText) {
