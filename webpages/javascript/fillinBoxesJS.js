@@ -34,4 +34,3 @@ for (var i = 0; i < amount; i++) {
 	str += '"></td>'
 	boxesTab.innerHTML += str;
 }
-//<td><input type="text" name="fill" placeholder="NOUN"></td>
