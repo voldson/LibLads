@@ -1,20 +1,34 @@
 // Get page elements
 const submitStoryButton = document.getElementById("submitStoryButton");
+const titleField = document.getElementById("titleField");
+const summaryField = document.getElementById("summaryField");
+const contentField = document.getElementById("contentField");
+
+// Other variables
+const title;
+const summary;
+const content;
+var parsedBlanks = [];
 
 // Add event listener
 submitStoryButton.addEventListener("click", validateStory);
 
 // Callbacks
 function validateStory() {
-    // Save the Title
-    // Save the Summary
-    // Save the Story
+    // Parse out the blanks
+    parseContent();
 
-    // Validate that none of these are identical to anything else in the database
+    // Add this information to the databse
+    addNewStory(parsedBlanks, contentField.value, summaryField.value, titleField.value);
 
-    goToSubmissionScreen();
+    // goToSubmissionScreen();
+}
+
+function parseContent() {
+    // Parse out the elements following the <:WORD:> format
+    parsedBlanks.push("test blank");
 }
 
 function goToSubmissionScreen() {
-    window.location.href = "404.html";
+   // window.location.href = "404.html";
 }

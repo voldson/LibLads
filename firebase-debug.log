@@ -1,32 +1,65 @@
-[debug] [2018-04-19T21:51:29.174Z] ----------------------------------------------------------------------
-[debug] [2018-04-19T21:51:29.177Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kelly\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-04-19T21:51:29.177Z] CLI Version:   3.18.4
-[debug] [2018-04-19T21:51:29.177Z] Platform:      win32
-[debug] [2018-04-19T21:51:29.177Z] Node Version:  v8.11.1
-[debug] [2018-04-19T21:51:29.178Z] Time:          Thu Apr 19 2018 17:51:29 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-04-19T21:51:29.178Z] ----------------------------------------------------------------------
+[debug] [2018-04-24T00:50:58.558Z] ----------------------------------------------------------------------
+[debug] [2018-04-24T00:50:58.561Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kelly\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-24T00:50:58.561Z] CLI Version:   3.18.4
+[debug] [2018-04-24T00:50:58.561Z] Platform:      win32
+[debug] [2018-04-24T00:50:58.561Z] Node Version:  v8.11.1
+[debug] [2018-04-24T00:50:58.562Z] Time:          Mon Apr 23 2018 20:50:58 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T00:50:58.562Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-04-19T21:51:29.188Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-04-19T21:51:29.189Z] > authorizing via signed-in user
-[debug] [2018-04-19T21:51:29.191Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/liblads-80e29  
+[debug] [2018-04-24T00:50:58.573Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-24T00:50:58.574Z] > authorizing via signed-in user
+[debug] [2018-04-24T00:50:58.576Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/liblads-80e29  
   
- Thu Apr 19 2018 17:51:29 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-04-19T21:51:29.447Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-19T21:51:29.449Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/liblads-80e29/tokens  
+ Mon Apr 23 2018 20:50:58 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T00:50:58.848Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-24T00:50:58.848Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/liblads-80e29/tokens  
   
- Thu Apr 19 2018 17:51:29 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-04-19T21:51:29.725Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-19T21:51:29.727Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/liblads-80e29  
+ Mon Apr 23 2018 20:50:58 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T00:50:59.131Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-24T00:50:59.132Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/liblads-80e29  
   
- Thu Apr 19 2018 17:51:29 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-04-19T21:51:29.987Z] <<< HTTP RESPONSE 200
+ Mon Apr 23 2018 20:50:59 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T00:50:59.298Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'C:\Users\Kelly\LibLads'...
 [info] 
-[debug] [2018-04-19T21:51:29.991Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1014749515123/clients/_:getWebAppConfig  
+[debug] [2018-04-24T00:50:59.300Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1014749515123/clients/_:getWebAppConfig  
   
- Thu Apr 19 2018 17:51:29 GMT-0400 (Eastern Daylight Time)
-[debug] [2018-04-19T21:51:30.282Z] <<< HTTP RESPONSE 200
+ Mon Apr 23 2018 20:50:59 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T00:50:59.510Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: webpages
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2018-04-24T01:09:23.094Z] ----------------------------------------------------------------------
+[debug] [2018-04-24T01:09:23.098Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kelly\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-24T01:09:23.098Z] CLI Version:   3.18.4
+[debug] [2018-04-24T01:09:23.098Z] Platform:      win32
+[debug] [2018-04-24T01:09:23.098Z] Node Version:  v8.11.1
+[debug] [2018-04-24T01:09:23.098Z] Time:          Mon Apr 23 2018 21:09:23 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T01:09:23.098Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-24T01:09:23.110Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-24T01:09:23.111Z] > authorizing via signed-in user
+[debug] [2018-04-24T01:09:23.114Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/liblads-80e29  
+  
+ Mon Apr 23 2018 21:09:23 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T01:09:23.594Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-24T01:09:23.596Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/liblads-80e29/tokens  
+  
+ Mon Apr 23 2018 21:09:23 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T01:09:23.986Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-24T01:09:23.988Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/liblads-80e29  
+  
+ Mon Apr 23 2018 21:09:23 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T01:09:24.207Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Kelly\LibLads'...
+[info] 
+[debug] [2018-04-24T01:09:24.214Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1014749515123/clients/_:getWebAppConfig  
+  
+ Mon Apr 23 2018 21:09:24 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T01:09:24.843Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: webpages
 [info] +  hosting: Local server: http://localhost:5000
 

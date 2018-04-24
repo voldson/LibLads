@@ -8,17 +8,10 @@ loginButton.addEventListener("click", authenticateLogin);
 
 // Callbacks
 function authenticateLogin() {
-    var email = emailField.value;
-    var password = passField.value;
+  var email = emailField.value;
+  var pass = passField.value;
 
-   // Firebase code
-   auth.signInWithEmailAndPassword(email, password).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
-    console.log("Sign in error");
-  });
+  signInUser(email, pass);
 
   // if all is fine, go to the choice screen to continue
   goToChoiceScreen();

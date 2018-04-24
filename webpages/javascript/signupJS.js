@@ -18,15 +18,9 @@ signupButton.addEventListener("click", function() {
         // Invalid email
         console.log("invalid email");
     } else {
-        firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // ...
-            console.log("Create user error");
-          });
+        createUser(email, pass);
 
-          goToChoiceScreen();
+        goToChoiceScreen();
     }
 });
 
