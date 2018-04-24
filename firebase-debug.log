@@ -246,3 +246,35 @@
 [info] +  hosting: Local server: http://localhost:5000
 
 [info] Shutting down...
+[debug] [2018-04-24T19:56:10.559Z] ----------------------------------------------------------------------
+[debug] [2018-04-24T19:56:10.562Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kelly\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-24T19:56:10.562Z] CLI Version:   3.18.4
+[debug] [2018-04-24T19:56:10.562Z] Platform:      win32
+[debug] [2018-04-24T19:56:10.562Z] Node Version:  v8.11.1
+[debug] [2018-04-24T19:56:10.563Z] Time:          Tue Apr 24 2018 15:56:10 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T19:56:10.563Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-24T19:56:10.576Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-24T19:56:10.577Z] > authorizing via signed-in user
+[debug] [2018-04-24T19:56:10.579Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/liblads-80e29  
+  
+ Tue Apr 24 2018 15:56:10 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T19:56:11.514Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-24T19:56:11.516Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/liblads-80e29/tokens  
+  
+ Tue Apr 24 2018 15:56:11 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T19:56:12.019Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-24T19:56:12.021Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/liblads-80e29  
+  
+ Tue Apr 24 2018 15:56:12 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T19:56:12.640Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Kelly\LibLads'...
+[info] 
+[debug] [2018-04-24T19:56:12.652Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1014749515123/clients/_:getWebAppConfig  
+  
+ Tue Apr 24 2018 15:56:12 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-24T19:56:13.370Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: webpages
+[info] +  hosting: Local server: http://localhost:5000
+
