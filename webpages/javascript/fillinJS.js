@@ -1,5 +1,10 @@
 // Get page elements
 const seeStoryButton = document.getElementById("seeStoryButton");
+var amount;
+var databaseStr;
+var title;
+var desc;
+var content;
 
 readFromDB();
 
@@ -8,8 +13,8 @@ seeStoryButton.addEventListener("click", function() {
     if (!allHaveText()) {
         alert("Please enter text into each of the boxes.");
     } else {
-        readFromDB();
-        goToStory();
+        makeStory();
+        //goToStory();
     }
 });
 
@@ -25,20 +30,18 @@ function readFromDB() {
         var storyIndex = 0;
 
         // Get the variables necessary for the program
-        var numBlanks = emptyStories[storyIndex].numBlanks;
-        var blanks = emptyStories[storyIndex].blanks;
-        var title = emptyStories[storyIndex].title;
-        var summary = emptyStories[storyIndex].summary;
+        amount = emptyStories[storyIndex].numBlanks;
+        databaseStr = emptyStories[storyIndex].blanks;
+        title = emptyStories[storyIndex].title;
+        desc = emptyStories[storyIndex].summary;
+        content = emptyStories[storyIndex].content;
        
         // Get the base page set up
-        fillinMainDiv(numBlanks, blanks, title, summary);
+        fillinMainDiv();
     });
 }
 
-function fillinMainDiv(amount, databaseStr, title, desc) {
-    var title = title;
-    var desc = desc;
-
+function fillinMainDiv() {
     var div = document.getElementById("mainDiv");
     var str = '<label>'
     str += title;
@@ -48,10 +51,10 @@ function fillinMainDiv(amount, databaseStr, title, desc) {
 
     div.innerHTML = str
 
-    fillinBoxes(amount, databaseStr);
+    fillinBoxes();
 }
 
-function fillinBoxes(amount, databaseStr) {
+function fillinBoxes() {
     var boxesTab = document.getElementById("words");
     var descriptors = [];
     var tempStr = '';
@@ -82,35 +85,42 @@ function fillinBoxes(amount, databaseStr) {
         str += '"></td>'
         boxesTab.innerHTML += str;
     }
-
-    // Put together the story
-    makeStory(amount);
 }
 
-function makeStory(amount) {
+function makeStory() {
     var story;
-    var blankFillers = setCurrentBlankFillers(amount);
+    var blankFillers = setCurrentBlankFillers();
+    var splitContent = content.split(" ");
+    var splitFillers = blankFillers.split(",");
+    var currentBlankIndex = 0;
+    var newContent = "";
+
+    for (var i = 0; i < splitContent.length; i++) {
+        var phrase = splitContent[i];
+
+        if (phrase.includes("==&&&==")) {
+            newContent += "<strong>" + splitFillers[currentBlankIndex++] + "</strong>";
+        } else {
+            newContent += phrase;
+        }
+
+        newContent += " ";
+    }
     
-    // Fully append everything
-    var div = document.getElementById("mainDiv");
-    var str = '<label>Your Story!</label><p>';
-    str += story;
-    str += '</p>';
-    div.innerHTML = str;
+    setStory(newContent);
 }
 
-function setCurrentBlankFillers(amount) {
+function setCurrentBlankFillers() {
 	var blankFillers = "";
 
 	for (var i = 0; i < amount; i++) {
 		word = document.getElementById(`box${i}`).value;
-
 		blankFillers += word + ",";
 	}	
 	return blankFillers;
 }
 
-function allHaveText(amount) {
+function allHaveText() {
 	for (var i = 0; i < amount; i++) {
 		word = document.getElementById(`box${i}`).value;
 

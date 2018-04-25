@@ -14,6 +14,18 @@ firebase.initializeApp(config);
 const dbRefEmptyStories = firebase.database().ref().child('emptyStories');
 const dbRefCurrentUsers = firebase.database().ref().child('currentUsers');
 
+// The actual story will be stored here
+var story = "";
+
+// Getter and setter for the story
+function getStory() {
+    return story;
+}
+function setStory(newStory) {
+    console.log("new story: " + newStory);
+    story = newStory;
+}
+
 // Adding a user to the database
 function addUserToDB(userID, currentStory, blankFillers) {
     var data = {
