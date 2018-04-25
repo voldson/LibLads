@@ -23,16 +23,47 @@ body {
     height: 100%;
     flex-direction: column;
     min-block-size: fit-content;
-    margin: 10%;
+    margin-top: 6%;
+}
+
+#buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    min-block-size: fit-content;
+    margin: 4%;
 }
 
 label {
     font-size: 24px;
-    /*margin-top: 2%;*/
 }
 
-p {
+textarea {
+    width: 80%;
+    border: 5px outset #622A0F;
+    padding: 15% 0;
+    padding-top: 0.5%;
+    padding-left: 0.5%;
+    margin-bottom: 1px;
+    text-align: top left;
     font-size: 20px;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+button {
+    display: inline-block;
+    padding: 15px 15px;
+    font-size: 24px;
+    cursor: pointer;
     text-align: center;
-    margin-bottom: 2%;
+    color: #fff;
+    background-color: #622A0F;
+    border-radius: 10px;
+    box-shadow: 0 9px #999;
+    min-block-size: fit-content; 
+    width: 30%;
+    margin-top: 1%;
 }

@@ -3,13 +3,11 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    flex-direction: column;
-    min-block-size: fit-content;
-    margin: 15%;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    background: #eee;
 
     background: url(../images/bookStretchedTop.png) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -20,7 +18,17 @@ body {
 
 label {
     font-size: 40px;
-    margin-bottom: 15px;
+    margin-bottom: 3%;
+}
+
+#mainDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    min-block-size: fit-content;
+    margin-top: 8%
 }
 
 #buttonDiv {
@@ -30,7 +38,7 @@ label {
     height: 100%;
     flex-direction: column;
     min-block-size: fit-content;
-    margin: 4%;
+    margin: 1%;
 }
 
 button {
@@ -43,8 +51,7 @@ button {
     background-color: #622A0F;
     border-radius: 10px;
     box-shadow: 0 9px #999;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 1%;
     min-block-size: fit-content; 
     width: 30%;
 }
