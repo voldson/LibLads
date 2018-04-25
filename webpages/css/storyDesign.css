@@ -23,7 +23,7 @@ body {
     height: 100%;
     flex-direction: column;
     min-block-size: fit-content;
-    margin-top: 10%
+    margin-top: 6%;
 }
 
 #buttonDiv {
@@ -40,11 +40,17 @@ label {
     font-size: 24px;
 }
 
-p {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 2%;
+textarea {
+    width: 80%;
     border: 5px outset #622A0F;
+    padding: 15% 0;
+    padding-top: 0.5%;
+    padding-left: 0.5%;
+    margin-bottom: 1px;
+    text-align: top left;
+    font-size: 20px;
+    margin-bottom: 3%;
+    margin-top: 2%;
 }
 
 button {
@@ -59,4 +65,5 @@ button {
     box-shadow: 0 9px #999;
     min-block-size: fit-content; 
     width: 30%;
+    margin-top: 1%;
 }

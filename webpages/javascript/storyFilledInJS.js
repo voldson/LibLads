@@ -8,8 +8,8 @@ createButton.addEventListener("click", goToCreate);
 
 function showStory() {
     var div = document.getElementById("mainDiv");
-    var str = '<label>Your Story!</label><p>';
+    var str = '<label>Your Story!</label><textarea readonly>';
     str += localStorage.getItem("story");
-    str += '</p>';
+    str += '</textarea>';
     div.innerHTML = str;
 }

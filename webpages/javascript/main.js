@@ -74,23 +74,23 @@ function createUser(email, pass) {
 
 // Moving screens
 function goToLogin() {
-    window.location.href = "../login.html";
+    window.location.href = "./login.html";
 }
 function goToSignup() {
-    window.location.href = "../signup.html";
+    window.location.href = "./signup.html";
 }
 function goToChoice() {
-    window.location.href = "../choice.html";
+    window.location.href = "./choice.html";
 }
 function goToFillin() {
-    window.location.href = "../fillin.html";
+    window.location.href = "./fillin.html";
 }
 function goToCreate() {
-    window.location.href = "../create.html";
+    window.location.href = "./create.html";
 }
 function goToConfirm() {
-    window.location.href = "../confirm.html";
+    window.location.href = "./confirm.html";
 }
 function goToStory() {
-    window.location.href = "../story.html";
+    window.location.href = "./story.html";
 }
