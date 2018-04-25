@@ -28,8 +28,7 @@ label {
     height: 100%;
     flex-direction: column;
     min-block-size: fit-content;
-    margin: 4%;
-    padding: 5% 0;
+    margin-top: 8%
 }
 
 #buttonDiv {
@@ -39,7 +38,7 @@ label {
     height: 100%;
     flex-direction: column;
     min-block-size: fit-content;
-    margin: 4%;
+    margin: 1%;
 }
 
 button {
@@ -52,8 +51,7 @@ button {
     background-color: #622A0F;
     border-radius: 10px;
     box-shadow: 0 9px #999;
-    margin-top: 4%;
-    margin-bottom: 2%;
+    margin-top: 1%;
     min-block-size: fit-content; 
     width: 30%;
 }
