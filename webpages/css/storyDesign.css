@@ -23,7 +23,17 @@ body {
     height: 100%;
     flex-direction: column;
     min-block-size: fit-content;
-    margin: 10%;
+    margin-top: 10%
+}
+
+#buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    min-block-size: fit-content;
+    margin: 4%;
 }
 
 label {
@@ -34,4 +44,19 @@ p {
     font-size: 20px;
     text-align: center;
     margin-bottom: 2%;
+    border: 5px outset #622A0F;
+}
+
+button {
+    display: inline-block;
+    padding: 15px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-color: #622A0F;
+    border-radius: 10px;
+    box-shadow: 0 9px #999;
+    min-block-size: fit-content; 
+    width: 30%;
 }

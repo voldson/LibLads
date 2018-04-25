@@ -29,7 +29,7 @@ label {
     flex-direction: column;
     min-block-size: fit-content;
     margin: 4%;
-    padding: 5%;
+    padding: 5% 0;
 }
 
 #buttonDiv {
