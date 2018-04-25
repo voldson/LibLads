@@ -27,7 +27,8 @@ function readFromDB() {
         });
 
         // Get a random story
-        var storyIndex = 0;
+        var numStories = emptyStories.length;
+        var storyIndex = Math.floor(Math.random() * numStories);
 
         // Get the variables necessary for the program
         amount = emptyStories[storyIndex].numBlanks;

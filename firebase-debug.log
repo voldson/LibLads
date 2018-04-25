@@ -646,3 +646,4 @@
 [info] i  hosting: Serving hosting files from: webpages
 [info] +  hosting: Local server: http://localhost:5000
 
+[info] Shutting down...

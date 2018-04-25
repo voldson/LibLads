@@ -28,13 +28,16 @@ function validateStory() {
     }    
 }
 
-// Check to see if a story by that name already exists
-function checkIfStoryExists(title) {
-    for (i = 0; i < emptyStories.length; i++) {
-        if (title === emptyStories[i].title) {
-            return true;
-        }
-    }
+function checkIfStoryExists(checkTitle) {
+    // Read in the stories in the database
+    dbRefEmptyStories.once('value', function (snap) { 
+        Object.keys(snap.val()).forEach(function(title) {
+            if (checkTitle === title) {
+                return true;
+            }
+        });
+    });
+
     return false;
 }
 
@@ -43,7 +46,6 @@ function parseContent() {
     // Parse out the elements following the <:WORD:> format
     var content = contentField.value;
     var split1 = content.split(/[<][:]/);
-    console.log("Split1: " + split1);
 
     for (var i = 0; i < split1.length; i++) {
         // Get each word
