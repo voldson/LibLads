@@ -1,6 +1,7 @@
 // Get page elements
 const fillinButton = document.getElementById("fillinButton");
 const createButton = document.getElementById("createButton");
+test = "test";
 
 // Add event listeners
 fillinButton.addEventListener("click", goToFillinScreen);

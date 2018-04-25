@@ -7,6 +7,7 @@ const contentField = document.getElementById("contentField");
 // Other variables
 var blanks = "";
 var numBlanks = 0;
+var newContent = "";
 
 // Add event listener
 submitStoryButton.addEventListener("click", validateStory);
@@ -23,8 +24,7 @@ function validateStory() {
     } else if (checkIfStoryExists(titleField.value)) {
         alert("A story by that name already exists. Please change the title.");
     } else {
-        // Add this information to the databse
-        addNewStoryToDB(blanks, contentField.value, summaryField.value, titleField.value, numBlanks);
+       addNewStoryToDB(blanks, newContent, summaryField.value, titleField.value, numBlanks);
     }    
 }
 
@@ -43,13 +43,15 @@ function parseContent() {
     // Parse out the elements following the <:WORD:> format
     var content = contentField.value;
     var split1 = content.split(/[<][:]/);
+    console.log("Split1: " + split1);
 
-    for (i = 0; i < split1.length; i++) {
+    for (var i = 0; i < split1.length; i++) {
         // Get each word
         var word = split1[i];
 
         // If the word doesn't contain the parsing tokens, continue
         if (!word.includes(":>")) {
+            newContent += word;
             continue;
         }
         
@@ -64,10 +66,11 @@ function parseContent() {
 
         // Append it to the string
         blanks += (numBlanks === 0) ? parsedWord : ("," + parsedWord);
+        newContent += "==&&&==" + splitEndTokens[1];
 
         // count number of found words
         numBlanks++;
    }
-   
+
    return (numBlanks === 0) ? false : true;
 }

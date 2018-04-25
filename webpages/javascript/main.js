@@ -8,10 +8,7 @@ var config = {
     messagingSenderId: "1014749515123"
 };
 
-firebase.initializeApp(config)
-
-// The list of stories
-let emptyStories = [];
+firebase.initializeApp(config);
 
 // Create reference to the database
 const dbRefEmptyStories = firebase.database().ref().child('emptyStories');
@@ -40,7 +37,6 @@ function addNewStoryToDB(parsedBlanks, contentText, summaryText, titleText, numB
          "title": titleText
      };
      dbRefEmptyStories.child(titleText).set(data);
- 
      // goToConfirm();
  }
 
@@ -64,16 +60,6 @@ function createUser(email, pass) {
     });
 }
 
-// Sync object changes
-dbRefEmptyStories.on('child_added', function(snap) { 
-    console.log(snap.val());
-    emptyStories.push(snap.val());
-    console.log(emptyStories);
-});
-dbRefEmptyStories.on('child_removed', function(snap) { 
-    // emptyStories = emptyStories.filter(item => item !== snap.val());
-    console.log(snap.val());
-});
 
 // Moving screens
 function goToLogin() {
