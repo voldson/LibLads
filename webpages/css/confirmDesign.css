@@ -22,3 +22,40 @@ label {
     font-size: 40px;
     margin-bottom: 15px;
 }
+
+#buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    min-block-size: fit-content;
+    margin: 4%;
+}
+
+button {
+    display: inline-block;
+    padding: 15px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-color: #622A0F;
+    border-radius: 10px;
+    box-shadow: 0 9px #999;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    min-block-size: fit-content; 
+    width: 30%;
+}
+
+button:hover {
+    background-color: rgb(133, 58, 21);
+}
+
+button:active {
+  background-color: rgb(68, 30, 11);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  color: rgba(255, 255, 255, 0.801)
+}

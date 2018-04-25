@@ -8,6 +8,7 @@ const contentField = document.getElementById("contentField");
 var blanks = "";
 var numBlanks = 0;
 var newContent = "";
+var titles = [];
 
 // Add event listener
 submitStoryButton.addEventListener("click", validateStory);
@@ -24,20 +25,31 @@ function validateStory() {
     } else if (checkIfStoryExists(titleField.value)) {
         alert("A story by that name already exists. Please change the title.");
     } else {
-       addNewStoryToDB(blanks, newContent, summaryField.value, titleField.value, numBlanks);
+        //addNewStoryToDB(blanks, newContent, summaryField.value, titleField.value, numBlanks);
     }    
 }
 
 function checkIfStoryExists(checkTitle) {
     // Read in the stories in the database
+    var storyTitles = [];
     dbRefEmptyStories.once('value', function (snap) { 
         Object.keys(snap.val()).forEach(function(title) {
-            if (checkTitle === title) {
-                return true;
-            }
+            
         });
+        const data = snapshot.val();
+
+        // get childKey exists status
+        var exists = data.hasOwnProperty(childKey);
+        titles = storyTitles;
     });
 
+    for (var i = 0; i < titles.length; i++) {
+        var current = new String(titles[i]).valueOf();
+        var check = new String(titles[i]).valueOf();
+        if (current === check) {
+            return true;
+        }
+    }
     return false;
 }
 
