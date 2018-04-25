@@ -15,14 +15,13 @@ const dbRefEmptyStories = firebase.database().ref().child('emptyStories');
 const dbRefCurrentUsers = firebase.database().ref().child('currentUsers');
 
 // The actual story will be stored here
-var story = "";
+story = "";
 
 // Getter and setter for the story
 function getStory() {
     return story;
 }
 function setStory(newStory) {
-    console.log("new story: " + newStory);
     story = newStory;
 }
 
@@ -49,7 +48,7 @@ function addNewStoryToDB(parsedBlanks, contentText, summaryText, titleText, numB
          "title": titleText
      };
      dbRefEmptyStories.child(titleText).set(data);
-     // goToConfirm();
+     goToConfirm();
  }
 
 // Sign in a user

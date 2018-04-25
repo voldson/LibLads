@@ -14,7 +14,7 @@ seeStoryButton.addEventListener("click", function() {
         alert("Please enter text into each of the boxes.");
     } else {
         makeStory();
-        //goToStory();
+        goToStory();
     }
 });
 
@@ -106,6 +106,8 @@ function makeStory() {
 
         newContent += " ";
     }
+
+    localStorage.setItem("story", newContent);
     
     setStory(newContent);
 }
