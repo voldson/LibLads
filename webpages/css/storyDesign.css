@@ -40,17 +40,9 @@ label {
     font-size: 24px;
 }
 
-textarea {
-    width: 80%;
-    border: 5px outset #622A0F;
-    padding: 15% 0;
-    padding-top: 0.5%;
-    padding-left: 0.5%;
-    margin-bottom: 1px;
-    text-align: top left;
+p {
     font-size: 20px;
-    margin-bottom: 3%;
-    margin-top: 2%;
+    text-align: center;
 }
 
 button {
