@@ -101,6 +101,7 @@ function makeStory() {
 
         if (phrase.includes("==&&&==")) {
             newContent += "<strong>" + splitFillers[currentBlankIndex++] + "</strong>";
+            newContent += phrase.split("==&&&==")[1];
         } else {
             newContent += phrase;
         }
@@ -108,6 +109,7 @@ function makeStory() {
         newContent += " ";
     }
 
+    
     localStorage.setItem("story", newContent);
     
     setStory(newContent);
