@@ -39,7 +39,8 @@ function checkIfStoryExists(checkTitle) {
         });
     });
 
-    if (localStorage.getItem("storyExists")) {
+    if (localStorage.getItem("storyExists") === true) {
+        localStorage.setItem("storyExists", false);
         return true;
     } else {
         return false;
@@ -67,8 +68,6 @@ function parseContent() {
         var lastChar = word.charAt(word.length - 2);
         var lastChar2 = word.charAt(word.length - 3);
         
-        
-
         // Parse out the ending tokens
         var splitEndTokens = word.split(/[:][>]/);
         parsedWord = splitEndTokens[0];

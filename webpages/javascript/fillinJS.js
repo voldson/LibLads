@@ -100,8 +100,12 @@ function makeStory() {
         var phrase = splitContent[i];
 
         if (phrase.includes("==&&&==")) {
-            newContent += "<strong>" + splitFillers[currentBlankIndex++] + "</strong>";
-            newContent += phrase.split("==&&&==")[1];
+            // Get anything before and after the actual blank
+            var before = phrase.split("==&&&==")[0];
+            var after = phrase.split("==&&&==")[1];
+            var actualBlank = "<strong>" + splitFillers[currentBlankIndex++] + "</strong>";
+
+            newContent += (before + actualBlank + after);
         } else {
             newContent += phrase;
         }
